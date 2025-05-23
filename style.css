@@ -12,25 +12,34 @@ body {
 body {
   width: 100%;
   background-color: #000;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                    url('assets/images/imagem-1-o-dia-que-eu-passei.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-@media (max-height: 500px) {
+
+
+/* @media (max-height: 500px) {
   body {
     margin: 25% 0 25% 0;
   }
-}
+} */
 
 .envelop {
-  width: 15rem;
-  height: 10rem;
+  width: 90%;
+  max-width: 400px;
+  aspect-ratio: 4/3;
   position: absolute;
   left: 0;
   right: 0;
   margin: auto;
 }
+/* 
 @media (min-width: 400px) and (max-width: 600px) {
   .envelop {
     width: 20rem;
@@ -47,7 +56,7 @@ body {
   .envelop {
     bottom: 20%;
   }
-}
+} */
 .envelop__front-paper {
   width: 100%;
   height: 100%;
@@ -98,7 +107,7 @@ body {
   background-size: 2rem;
   background-position: center;
 }
-@media (max-width: 400px) {
+/* @media (max-width: 400px) {
   .envelop__sticker {
     background-size: 1.2rem;
   }
@@ -107,7 +116,7 @@ body {
   .envelop__sticker {
     height: 15%;
   }
-}
+} */
 .envelop__false-sticker {
   width: 20%;
   height: 20%;
@@ -124,7 +133,7 @@ body {
   background-size: 2rem;
   background-position: center;
 }
-@media (max-width: 400px) {
+/* @media (max-width: 400px) {
   .envelop__false-sticker {
     background-size: 1.2rem;
   }
@@ -133,7 +142,7 @@ body {
   .envelop__false-sticker {
     height: 15%;
   }
-}
+} */
 .envelop__content {
   width: 100%;
   height: 100%;
@@ -160,6 +169,11 @@ body {
   transition: height 0.5s, opacity 0.25s;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
+.note__text p {
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  margin-bottom: 1rem;
+  text-align: center;
+}
 .note:nth-child(1) {
   bottom: 60%;
 }
@@ -182,7 +196,7 @@ body {
   margin-bottom: 1rem;
   text-align: center;
 }
-@media (min-width: 300px) and (max-width: 600px) {
+/* @media (min-width: 300px) and (max-width: 600px) {
   .note__text p {
     font-size: 1.025rem;
   }
@@ -191,7 +205,7 @@ body {
   .note__text p {
     font-size: 1.15rem;
   }
-}
+} */
 
 .scissors {
   cursor: url("https://i.postimg.cc/GtLCdKxR/sisors.png"), pointer;
@@ -202,4 +216,26 @@ body {
 
 .cursor {
   cursor: pointer;
+}
+
+.music-control {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#music-button {
+  background-color: #fff;
+  border: 2px solid #967b5c;
+  border-radius: 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: background-color 0.3s;
+}
+
+#music-button:hover {
+  background-color: #f0e6d6;
 }

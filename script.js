@@ -17,6 +17,48 @@ function recize_notes() {
     }
   }
 }
+// Fução que toca a música em loop
+const musicTracks = [
+  "assets/musica/Chill Lofi.mp3",
+  "assets/musica/Lo-fi Type Beat - Lonely Nights.mp3",
+  "assets/musica/MONTAGEM CORAL.mp3",
+  "assets/musica/R&B Acoustic Guitar.mp3",
+  "assets/musica/R&B Type Beat- Time Tells.mp3",
+];
+
+const audio = document.getElementById("background-music");
+const musicButton = document.getElementById("music-button");
+
+// Escolhe uma música aleatória ao carregar
+const randomTrack = musicTracks[Math.floor(Math.random() * musicTracks.length)];
+audio.querySelector("source").src = randomTrack;
+audio.load();
+
+let isPlaying = false;
+
+musicButton.addEventListener("click", () => {
+  if (isPlaying) {
+    audio.pause();
+    musicButton.textContent = "🎵 Play Música";
+  } else {
+    audio.play();
+    musicButton.textContent = "⏸️ Pause Música";
+  }
+  isPlaying = !isPlaying;
+});
+
+// Fução que muda imagem no background
+const backgrounds = [
+  "assets/images/imagem-1-o-dia-que-eu-passei.png",
+  "assets/images/imagem-2.jpg",
+  "assets/images/imagem-3.jpg",
+  "assets/images/imagem-4.jpg",
+  "assets/images/imagem-5.jpg",
+];
+
+const randomBackground =
+  backgrounds[Math.floor(Math.random() * backgrounds.length)];
+document.body.style.backgroundImage = `url('${randomBackground}')`;
 
 //-> Main function that enables all the notes.
 function notes_ready() {
