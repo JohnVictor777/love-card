@@ -19,11 +19,8 @@ function recize_notes() {
 }
 // Fução que toca a música em loop
 const musicTracks = [
-  "assets/musica/Chill Lofi.mp3",
+  "assets/musica/Fly Me To The Moon - Lofi.mp3",
   "assets/musica/Lo-fi Type Beat - Lonely Nights.mp3",
-  "assets/musica/MONTAGEM CORAL.mp3",
-  "assets/musica/R&B Acoustic Guitar.mp3",
-  "assets/musica/R&B Type Beat- Time Tells.mp3",
 ];
 
 const audio = document.getElementById("background-music");
